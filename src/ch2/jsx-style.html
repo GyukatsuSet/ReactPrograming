@@ -1,0 +1,38 @@
+<!DOCTYPE html><html><head>
+    <meta charset="UTF-8">
+
+    <!-- 라이브러리 읽어들이기-->
+    <script src = "https://unpkg.com/react@15/dist/react.min.js"></script>
+    <script src = "https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.min.js"></script>
+</head>
+<body>
+    <div id = "root"></div>
+    <script type = "text/babel">
+        // React로 DOM의 내용을 변경하기
+        ReactDOM.render(
+            getDOM(),
+            document.getElementById('root')
+        )
+        function getDOM(){
+            const css1 = { // css style
+                "color" : 'red',
+                "backgroundColor" : '#f0f0ff',
+                "fontSize" : '2em'
+            }
+            const css2 = { // js style
+                color : 'blue',
+                backgroundColor : '#fff0f0',
+                fontSize : '2em'
+            }
+            const img = "롯데의 하루.gif"
+            return(
+                <div>
+                    <img src = {img}/>
+                    <p style = {css1}>천방지축 어리둥절 빙글빙글 돌아가는 롯데의 하루</p>
+                    <p style = {css2}>우리의 롯데는 후반기엔 잘할 수 있을까?</p>
+                </div>
+            )
+        }
+    </script>
+</body></html>
